@@ -55,6 +55,15 @@ html {
     font-size: 2rem;
 }
 
+/* REVIEW IMAGE INFORMATION
+
+#welcome-section img {
+    height: 100vh;
+    width: auto;
+}
+
+*/
+
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
