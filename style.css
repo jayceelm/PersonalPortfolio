@@ -45,7 +45,14 @@ html {
     height: 100vh;
     background-color: palevioletred;
     color: aliceblue;
-    font-size: 5rem;
+    }
+
+#welcome-section h1 {
+    font-size: 4rem;
+}
+
+#welcome-section p {
+    font-size: 2rem;
 }
 
 .projects-grid {
