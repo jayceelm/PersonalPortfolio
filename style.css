@@ -49,11 +49,13 @@ html {
 #welcome-section h1 {
     font-size: 4rem;
     color: white;
+    text-shadow: 2px 2px 12px darkslategrey;
 }
 
 #welcome-section p {
     font-size: 2rem;
     color: white;
+    text-shadow: 2px 2px 8px darkslategrey;
 }
 
 .projects-grid {
