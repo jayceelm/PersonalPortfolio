@@ -60,6 +60,7 @@ html {
 
 .projects-grid {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -87,12 +88,21 @@ figcaption {
     text-align: center;
 }
 
+.contact-details {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
 }
 
 footer {
     font-size: small;
+    color: white;
+    background-color: #F1491A;
+    margin-top: 2em;
 }
 
 @media (max-width: 1200px) {
