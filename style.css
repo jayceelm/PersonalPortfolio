@@ -70,8 +70,8 @@ a {
 }
 
 .projects-grid img {
-    height: 15rem;
-    width: auto;
+    height: auto;
+    width: 40vw;
 }
 
 .project-tile {
