@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+#main { 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figure {
+    color: white;
+    background-color: navy;
+    margin: .5rem;
+    border-radius: 5px;
+}
+
+figure > img {
+    height: 180px;
+    width: auto;
+}
+
