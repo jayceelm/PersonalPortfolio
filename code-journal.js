@@ -30,3 +30,15 @@ let myBool = true
 
 let myArray = [____] // this Array is empty (need to fill in)
 let myArray2 = [42.8748, "String", myBool, ANSWER, true]
+
+/* For Loop (needs 4 parts)
+let i = X, firs tstatement
+second statement: qualifier?
+thrid condition: how the for loop runs i++ (i+1) */
+
+function sumTwoThings(one, two) {
+    return one + two;
+}
+
+// Arrow Functions
+const theFunction = () => "I am djfkhsd"
