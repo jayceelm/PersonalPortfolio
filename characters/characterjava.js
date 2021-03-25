@@ -4,36 +4,38 @@ const mainContent = document.querySelector('main')
 
 const mainHeader = document.createElement('header')
 
+document.body.insertBefore(mainHeader, mainContent)
+
+//all button
+const allButton = document.createElement('button')
+allButton.textContent = 'All Characters'
+allButton.addEventListener('click', () => populateDOM(people))
+
+// male button 
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
-maleButton.addEventListener('click', () => {
-    populateDOM(maleCharacters)
-})
+maleButton.addEventListener('click', () => populateDOM(maleCharacters))
 
+//female button
 const femaleButton = document.createElement('button')
 femaleButton.textContent = 'Female Characters'
-femaleButton.addEventListener('click', () => {
-    populateDOM(femaleCharacters)
-})
+femaleButton.addEventListener('click', () => populateDOM(femaleCharacters))
 
+// nonbinary button
 const nonbinaryButton = document.createElement('button')
 nonbinaryButton.textContent = 'Non-binary Characters'
-nonbinaryButton.addEventListener('click', () => {
-    populateDOM(nonbinaryCharacters)
-})
+nonbinaryButton.addEventListener('click', () => populateDOM(nonbinaryCharacters))
 
+// page reset
 const refreshButton = document.createElement('button')
 refreshButton.textContent = 'Reset'
-refreshButton.addEventListener('click', () => {
-    location.reload();
-})
+refreshButton.addEventListener('click', () => location.reload())
 
+mainHeader.appendChild(allButton)
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
 mainHeader.appendChild(nonbinaryButton)
 mainHeader.appendChild(refreshButton)
-document.body.insertBefore(mainHeader, mainContent)
-
 
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
@@ -48,6 +50,7 @@ console.log(femaleCharacters)
 console.log(nonbinaryCharacters)
 
 function populateDOM(characters) {
+    removeChildren(mainContent)
     characters.forEach(person => {
         const charFigure = document.createElement('figure')
         const charImg = document.createElement('img')
@@ -71,3 +74,8 @@ function getLastNumber(url) {
     }
     return url.slice(start, end)
 }
+function removeChildren(container) {
+    while(container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
+    }
