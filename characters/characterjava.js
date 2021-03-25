@@ -26,28 +26,39 @@ const nonbinaryButton = document.createElement('button')
 nonbinaryButton.textContent = 'Non-binary Characters'
 nonbinaryButton.addEventListener('click', () => populateDOM(nonbinaryCharacters))
 
+//worst button
+const worstButton = document.createElement('button')
+worstButton.textContent = 'Worst Character'
+worstButton.addEventListener('click', () => populateDOM(worstCharacter))
+
 // page reset
 const refreshButton = document.createElement('button')
 refreshButton.textContent = 'Reset'
 refreshButton.addEventListener('click', () => location.reload())
 
+// append
 mainHeader.appendChild(allButton)
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
 mainHeader.appendChild(nonbinaryButton)
+mainHeader.appendChild(worstButton)
 mainHeader.appendChild(refreshButton)
 
+// people filters
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
 const nonbinaryCharacters = people.filter(person => {
-    if (person.gender === 'n/a' || person.gender === 'none') {
+    if (person.gender === 'n/a' || person.gender === 'none' || person.gender === 'hermaphrodite') {
         return person
     }
 }) 
+const worstCharacter = people.filter(person => person.name === 'Anakin Skywalker')
 
 console.log(maleCharacters)
 console.log(femaleCharacters)
 console.log(nonbinaryCharacters)
+
+// functions
 
 function populateDOM(characters) {
     removeChildren(mainContent)
