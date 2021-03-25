@@ -1,4 +1,5 @@
 import { films } from '../data/films.js'
+import { getLastNumber } from '../utils/index.js'
 
 /* let itemOne = document.querySelector('#movie1')
 let itemTwo = document.querySelector('#movie2')
@@ -26,7 +27,3 @@ for (let i = 0; i < films.length; i++) {
 
 }
 
-function getLastNumber(url) {
-    let end = url[url.length - 2]
-    return parseInt(end, 10)
-}
