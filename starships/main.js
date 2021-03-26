@@ -4,6 +4,19 @@ import { removeChildren, getLastNumber } from '../utils/index.js'
 const main = document.querySelector('main')
 const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.shipView')
+const message = document.querySelector('.modal')
+
+const closeButton=document.querySelector('.modal-close')
+
+closeButton.addEventListener('click', () => {
+    message.classList.toggle('is-active')
+})
+
+const modalBackground=document.querySelector('.modal-background')
+
+modalBackground.addEventListener('click', () => {
+    message.classList.toggle('is-active')
+})
 
 function populateNav() {
     starships.forEach((starship) => {
@@ -25,6 +38,7 @@ function populateShipView(shipData) {
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
     shipImage.addEventListener('error', () => {
         shipImage.hidden = true
+        message.classList.toggle('is-active')
 }    )
     shipView.appendChild(shipImage)
 }
@@ -35,9 +49,9 @@ function addStarField(element, numStars) {
     element.style.setProperty('background-color', 'black')
     for (let i = 0; i < numStars; i++) {
         let star = document.createElement('div')
-        star.style.setProperty('width', '1.5px')
-        star.style.setProperty('height', '1.5px')
-        star.style.setProperty('background-color', 'lightyellow')
+        star.style.setProperty('width', '1px')
+        star.style.setProperty('height', '1px')
+        star.style.setProperty('background-color', 'aliceblue')
         let xy = getRandomPosition()
         star.style.left = `${xy[0]}px`
         star.style.top = `${xy[1]}px`
@@ -54,4 +68,4 @@ function getRandomPosition() {
     return [randomX, randomY]
 }
 
-addStarField(document.querySelector('body'), 500)
+addStarField(document.querySelector('body'), 900)
