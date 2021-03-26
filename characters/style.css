@@ -1,3 +1,8 @@
+:root {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -7,6 +12,9 @@ html {
 
 body {
     background-color: black;
+    height: 100vh;
+    width: 100vw;
+
 }
 
 h1 {
@@ -19,14 +27,21 @@ h1 {
 }
 
 figure {
+    z-index: 1;
     color: white;
     background-color: navy;
-    margin: .5rem;
     border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 160px;
 }
 
 figure > img {
-    height: 180px;
-    width: auto;
+    height: auto;
+    max-width: 160px;
+    border-top-left-radius : 5px;
+    border-top-right-radius : 5px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
