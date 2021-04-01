@@ -28,7 +28,7 @@ a {
 }
 
 .navlist a {
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: bold;
     padding: .5em;
     color: #F1491A;
@@ -54,7 +54,7 @@ a {
 #welcome-section h1 {
     font-size: 4rem;
     color: white;
-    text-shadow: 2px 2px 12px darkslategrey;
+    text-shadow: 2px 4px 15px darkslategrey;
 }
 
 #welcome-section p {
