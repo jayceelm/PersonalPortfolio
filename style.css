@@ -32,7 +32,7 @@ a {
     font-weight: bold;
     padding: .5em;
     color: #F1491A;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .navlist a:hover {
