@@ -123,6 +123,10 @@ footer {
     padding: .75em;
 }
 
+button {
+    background-color: hotpink;
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 110%;
