@@ -36,7 +36,7 @@ a {
 }
 
 .navlist a:hover {
-    transform: translateY (~3px);
+    transform: translateY;
     background-color: #F1491A;
     color: white;
 }
