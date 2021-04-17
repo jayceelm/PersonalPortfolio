@@ -127,8 +127,8 @@ button {
     background-color: hotpink;
 }
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     html {
         font-size: 110%;
     }
-} */
+}
