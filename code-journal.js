@@ -42,3 +42,8 @@ function sumTwoThings(one, two) {
 
 // Arrow Functions
 const theFunction = () => "I am djfkhsd"
+
+//a higher order function is a function that accepts another as a parameter
+// filter, map, and reduce are the most popular, but forEach, every, and find are also HOFS 
+
+// filter method example - filter returns an array of elements that "pass"
