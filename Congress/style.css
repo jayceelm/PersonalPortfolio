@@ -1,0 +1,23 @@
+* {
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.congressGrid { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.figureDiv {
+    margin: 10px;
+}
+
+.congressGrid img {
+    width: 15vw;
+    height: auto;
+}
+
+figcaption {
+    text-align: center;
+}
