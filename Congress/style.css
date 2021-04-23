@@ -12,16 +12,12 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    border: red;
 }
 
 .figureDiv {
     margin: 10px;
-    width: 150px;
-    height: 150px;
-    text-align:center;
-    border: 5px solid;
-    border-image:  linear-gradient(to right blue red white);
-  }
+}
 
 .congressGrid img {
     width: 15vw;
@@ -30,4 +26,5 @@ font-family: 'Poppins', sans-serif;
 
 figcaption {
     text-align: center;
+    font-size: 10px;
 }
