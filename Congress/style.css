@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+html {
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+
 .congressGrid { 
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +16,12 @@
 
 .figureDiv {
     margin: 10px;
-}
+    width: 150px;
+    height: 150px;
+    text-align:center;
+    border: 5px solid;
+    border-image:  linear-gradient(to right blue red white);
+  }
 
 .congressGrid img {
     width: 15vw;
