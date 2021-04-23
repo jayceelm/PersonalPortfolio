@@ -43,6 +43,7 @@ function populatePokeCard(singlePokeCard) {
     });
 
     pokeCard.appendChild(populateCardFront(singlePokeCard));
+    pokeCard.appendChild(populateCardBack(singlePokeCard));
     pokeScene.appendChild(pokeCard);
     pokeGrid.appendChild(pokeScene);
 }
