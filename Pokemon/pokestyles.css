@@ -26,6 +26,7 @@ button {
     justify-content: center;
     padding: 10px;
     border-radius: 40px;
+    cursor: pointer;
 }
 
 .pokeGrid {
@@ -69,7 +70,7 @@ img {
 }
 
 .card__face--back {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
     background: aliceblue;
     color: orange;
 }
