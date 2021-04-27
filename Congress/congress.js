@@ -1,27 +1,27 @@
 import { senators } from "../data/senators.js";
 import { representatives } from "../data/representatives.js";
+import { removeChildren } from "../utils/index.js";
 
 const congressGrid = document.querySelector(".congressGrid");
-const stateButton = document.querySelector("#state");
-const demButton = document.querySelector("#democrats")
-const repButton = document.querySelector('#republicans')
-const indButton = document.querySelector('#independents')
+const demButton = document.querySelector("#democrats");
+const repButton = document.querySelector("#republicans");
+const indButton = document.querySelector("#independents");
 
-demButton.addEventListener("click", () => {
-  showDemocrats();
+republicansButton.addEventListener("click", () => {
+  populateCongressDiv(filterCongressPeople(representatives, "R"));
 });
 
-function populateCongressGrid(simpleList) {
-  simpleList.forEach((person) => {
+function populateCongressDiv(simplifiedList) {
+  removeChildren(congressGrid);
+  simplifiedList.forEach((person) => {
     let personDiv = document.createElement("div");
-      personDiv.className = 'figureDiv'
+    personDiv.className = "figureDiv";
     let personFig = document.createElement("figure");
     let figImg = document.createElement("img");
     let figCaption = document.createElement("figcaption");
 
     figImg.src = person.imgURL;
     figCaption.textContent = person.name;
-
     personFig.appendChild(figImg);
     personFig.appendChild(figCaption);
     personDiv.appendChild(personFig);
@@ -33,25 +33,18 @@ function getSimplifiedPeople(peopleList) {
   return peopleList.map((person) => {
     let middleName = person.middle_name ? ` ${person.middle_name}` : ``;
     return {
-      name: `${person.first_name} ${middleName} ${person.last_name}`,
-      state: person.state,
+      id: person.id,
+      name: `${person.first_name}${middleName} ${person.last_name}`,
       imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-100px.jpeg`,
+      party: person.party,
     };
   });
 }
 
-populateCongressGrid(getSimplifiedPeople(representatives));
+const filterCongressPeople = (chamber, politicalParty) => {
+  return getSimplifiedPeople(chamber).filter(
+    (member) => member.party === politicalParty
+  );
+};
 
-const demButton = document.querySelector("#democrats");
-
-function showDemocrats() {
-  const dems = representatives.map((rep) => {
-    let smallDem = {};
-    if (rep.party === "D") {
-      smallDem.id = rep.id;
-      smallDem.name = `${rep.first_name} ${rep.last_name}`;
-    }
-    return smallDem;
-  });
-  console.log(dems);
-}
+populateCongressDiv(getSimplifiedPeople(senators));
