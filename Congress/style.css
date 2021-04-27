@@ -22,11 +22,15 @@ font-family: 'Poppins', sans-serif;
 .congressGrid img {
     width: 15vw;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px navy;
 }
 
 figcaption {
     text-align: center;
     font-size: 10px;
+    color: red;
+    font-weight: bold;
 }
 
 button { 
