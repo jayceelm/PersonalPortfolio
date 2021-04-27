@@ -35,7 +35,7 @@ function getSimplifiedPeople(peopleList) {
 
 populateCongressGrid(getSimplifiedPeople(representatives));
 
-/* const demButton = document.querySelector("#democrats");
+const demButton = document.querySelector("#democrats");
 
 demButton.addEventListener("click", () => {
   showDemocrats();
@@ -46,7 +46,7 @@ function showDemocrats() {
     let smallDem = {};
     if (rep.party === "D") {
       smallDem.id = rep.id;
-      smallDem.name = "${rep.first_name} ${rep.last_name}";
+      smallDem.name = `${rep.first_name} ${rep.last_name}`;
     }
     return smallDem;
   });
@@ -54,4 +54,4 @@ function showDemocrats() {
 }
 
 //const repButton = document.querySelector('.republicans')//
-//const indButton = document.querySelector('.independents')// */
+//const indButton = document.querySelector('.independents')//
