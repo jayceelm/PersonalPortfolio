@@ -2,20 +2,11 @@ import { senators } from "../data/senators.js";
 import { representatives } from "../data/representatives.js";
 
 const congressGrid = document.querySelector(".congressGrid");
-const democratButton = document.querySelector("#democrats");
-const repButton = document.querySelector("#republicans");
-const Button = document.querySelector("#republicans");
+const demButton = document.querySelector('#democrats');
 
-democratButton.addEventListener("click", () => {
-  populateCongressDiv(filterCongressPeople(representatives, "D"));
-});
-
-repButton.addEventListener("click", () => {
-  populateCongressDiv(filterCongressPeople(representatives, "R"));
-});
-
-stateButton.addEventListener('click', () => stateSort());
-
+demButton.addEventListener('click', () => {
+  populateCongressDiv(filterCongressPeople(representatives, 'D'))
+})
 
 function populateCongressGrid(simpleList) {
   simpleList.forEach((person) => {
@@ -46,14 +37,8 @@ function getSimplifiedPeople(peopleList) {
   });
 }
 
-
-function stateSort() {
-  populateCongressDiv(getSimplifiedPeople(representatives).sort((a, b) => a.state- b.state))
-
 const filterCongressPeople = (chamber, politicalParty) => {
-  return getSimplifiedPeople(chamber).filter(
-    (member) => member.party === politicalParty
-  );
-};
+  return getSimplifiedPeople(chamber).filter(member => member.party === politicalParty)
+}
 
-populateCongressGrid(getSimplifiedPeople(representatives));
+populateCongressGrid(getSimplifiedPeople(senators))
