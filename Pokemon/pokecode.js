@@ -77,9 +77,7 @@ function populateCardBack(pokemon) {
   let pokeBack = document.createElement("div");
   pokeBack.className = "card__face card__face--back";
   let backLabel = document.createElement("p");
-  backLabel.textContent = [`Weight: ${pokemon.weight.length}`, `Height: ${pokemon.height.length}`,`Moves: ${pokemon.moves.length}`];
-  // I realize this is not correctly executed. The height and weight show up when it's just the two, but once I add//
-  // any third element only it works //
+  backLabel.textContent = [`Weight: ${pokemon.weight}`, ` Height: ${pokemon.height}`, ` Moves: ${pokemon.moves.length}`];
   pokeBack.appendChild(backLabel);
   return pokeBack;
 }

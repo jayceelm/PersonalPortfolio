@@ -3,15 +3,25 @@ import { representatives } from "../data/representatives.js";
 
 const congressGrid = document.querySelector(".congressGrid");
 const demButton = document.querySelector('#democrats');
+const repButton = document.querySelector('#republicans');
+const indButton = document.querySelector(`#indeoendents`)
+const stateButton = document.querySelector('#state');
 
 demButton.addEventListener('click', () => {
-  populateCongressDiv(filterCongressPeople(representatives, 'D'))
+  populateCongressGrid(filterCongressPeople(representatives, 'D'))
 })
+
+/*repButton.addEventListener('click', () => {
+  populateCongressGrid(filterCongressPeople(representatives, 'R'))
+})*/
+
+/*indButton.addEventListener('click', () => {
+  populateCongressGrid(filterCongressPeople(representatives, 'I'))
+})*/
 
 function populateCongressGrid(simpleList) {
   simpleList.forEach((person) => {
     let personDiv = document.createElement("div");
-    //personDiv.className = 'figureDiv'//
     let personFig = document.createElement("figure");
     let figImg = document.createElement("img");
     let figCaption = document.createElement("figcaption");
