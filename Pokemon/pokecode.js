@@ -7,11 +7,11 @@ sortButton.addEventListener("click", () => {
 });
 
 class Pokemon {
-  constructor(name, height, weight, type) {
+  constructor(name, height, weight, moves) {
     this.name = name;
     this.height = height;
     this.weight = weight;
-    this.type = type;
+    this.moves = moves;
   }
 }
 
@@ -19,8 +19,8 @@ addButton.addEventListener("click", () => {
   let pokeName = prompt("What's the Pokemon's name?");
   let pokeHeight = prompt("Height");
   let pokeWeight = prompt("Weight");
-  let pokeType = prompt("Type");
-  let newPokemon = new Pokemon(pokeName, pokeHeight, pokeWeight, pokeType);
+  let pokeMoves = prompt("Moves");
+  let newPokemon = new Pokemon(pokeName, pokeHeight, pokeWeight, pokeMoves);
   populatePokeCard(newPokemon);
 });
 

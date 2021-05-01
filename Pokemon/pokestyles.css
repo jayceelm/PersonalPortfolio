@@ -53,6 +53,7 @@ img {
     height: auto;
     padding: 5px;
     margin: 0;
+    border-radius: 20px;
 }
 
 .card {
@@ -62,6 +63,7 @@ img {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    border-radius: 20px;
 }
 
 .card.is-flipped {
@@ -71,6 +73,7 @@ img {
 .card__face--front {
     background: aliceblue;
     color: orange;
+
 }
 
 .card__face--back {
@@ -85,4 +88,5 @@ img {
     height: 100%;
     text-align: center;
     backface-visibility: hidden;
+    border-radius: 20px;
 }
